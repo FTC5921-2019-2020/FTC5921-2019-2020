@@ -1,0 +1,603 @@
+<RobotConfigXML>
+<OpMode id="TEST">
+  <command id="SET_INTAKE_POWER">
+    <powerLeft>0.4</powerLeft>
+    <powerRight>0.2</powerRight>
+  </command>
+  <command id="SLEEP">
+    <ms>1000</ms>
+  </command>
+  <command id="SET_INTAKE_POWER">
+    <powerLeft>0</powerLeft>
+    <powerRight>0</powerRight>
+  </command>
+</OpMode>
+  <OpMode id="BLUE_TOP">
+    <command id="STRAFE">
+      <distance>40.0</distance>
+      <power>0.5</power>
+      <direction>left</direction>
+    </command>
+    <command id="MOVE_FINGERS">
+      <position>down</position>
+    </command>
+    <command id="SLEEP">
+      <ms>1000</ms>
+    </command>
+    <command id="STRAFE">
+      <distance>26.0</distance>
+      <power>0.75</power>
+      <direction>right</direction>
+    </command>
+    <command id="STRAIGHT" gyro="on" invert_for_red="on">
+      <distance>8.0</distance>
+      <power>0.75</power>
+      <!-- Slow down to preserve servo -->
+    </command>
+    <command id="STRAIGHT" gyro="on" invert_for_red="on">
+      <distance>10.0</distance>
+      <power>0.3</power>
+    </command>
+    <command id="TURN" invert_for_red="on">
+      <angle>90</angle>
+      <power>0.75</power>
+    </command>
+    <command id="MOVE_FINGERS">
+      <position>up</position>
+    </command>
+	<command id="ASYNC_HOLD_BOOM">
+      <operation>start</operation>
+      <position>-620</position>
+    </command>
+    <command id="SLEEP">
+      <ms>1000</ms>
+    </command>
+    <command id="STRAIGHT" gyro="on" invert_for_red="on">
+      <distance>-8.5</distance>
+      <power>0.75</power>
+    </command>
+    <command id="STRAFE">
+      <distance>12.0</distance>
+      <power>0.75</power>
+      <direction>left</direction>
+    </command>
+    <command id="STRAFE">
+      <distance>8.0</distance>
+      <power>0.75</power>
+      <direction>right</direction>
+    </command>
+    <command id="STRAIGHT" gyro="on" invert_for_red="on">
+      <distance>19.0</distance>
+      <power>0.75</power>
+    </command>
+    <!--Quick change to re-adjust position for robot once teleop starts-->
+    <command id="TURN">
+      <angle>-90</angle>
+      <power>0.75</power>
+    </command>
+    <command id="STRAIGHT" gyro="on">
+      <distance>33.0</distance>
+      <power>0.75</power>
+    </command>
+  </OpMode>
+  <OpMode id="BLUE_BOTTOM">
+    <command id="FIND_SKYSTONE_PATTERN">
+      <ocv_image_provider>vuforia</ocv_image_provider>
+    </command>
+    <!-- command id="VUFORIA">
+      <operation>release</operation>
+    </command -->
+    <command id="ADVANCE_TO_QUARRY">
+      <drive_distance>21.5</drive_distance>
+      <drive_power>0.75</drive_power>
+      <disengage_boom_clicks>-550</disengage_boom_clicks>
+      <raise_boom_clicks>200</raise_boom_clicks>
+      <extend_boom_clicks>1370</extend_boom_clicks>
+    </command>
+    <command id="ROTATE_GRIPPER">
+      <position>degrees_90</position>
+    </command>
+    <command id="STRAFE_TO_SKYSTONE">
+      <power>0.75</power>
+      <cardinal>first</cardinal>
+    </command>
+    <command id="TILT_BOOM">
+      <position>-611</position>
+    </command>
+    <command id="SET_GRIPPER_POSITION">
+      <position>grip</position>
+    </command>
+    <command id="SLEEP">
+      <ms>500</ms>
+    </command>
+    <command id="TILT_BOOM">
+      <position>400</position>
+    </command>
+    <command id="ASYNC_TURN">
+      <operation>start</operation>
+      <angle>-90</angle>
+    </command>
+    <command id="ROTATE_GRIPPER">
+      <position>neutral</position>
+    </command>
+    <command id="SLEEP">
+      <ms>500</ms>
+    </command>
+    <command id="MOVE_BOOM">
+      <position>454</position>
+    </command>
+    <command id="TILT_BOOM">
+      <position>-341</position>
+    </command>
+    <command id="MOVE_BOOM">
+      <position>0</position>
+    </command>
+    <command id="TILT_BOOM">
+      <position>-620</position>
+    </command>
+    <command id="ASYNC_HOLD_BOOM">
+      <operation>start</operation>
+      <position>-620</position>
+    </command>
+    <command id="SET_GRIPPER_POSITION">
+      <position>neutral</position>
+    </command>
+    <command id="ASYNC_TURN">
+      <operation>wait</operation>
+    </command>
+    <command id="STRAIGHT_AFTER_SKYSTONE" gyro="on">
+      <distance>-72.5</distance>
+      <cardinal>first</cardinal>
+      <power>1.0</power>
+    </command>
+    <!-- See if this helps with alignment -->
+    <command id="DESKEW"/>
+    <command id="STRAFE">
+      <distance>14.0</distance>
+      <power>0.4</power>
+      <direction>left</direction>
+    </command>
+    <command id="MOVE_FINGERS">
+      <position>down</position>
+    </command>
+    <command id="SLEEP">
+      <ms>500</ms>
+    </command>
+    <command id="STRAFE">
+      <distance>28.0</distance>
+      <power>0.85</power>
+      <direction>right</direction>
+    </command>
+    <command id="STRAIGHT" gyro="on" invert_for_red="on">
+      <distance>6.0</distance>
+      <power>0.85</power>
+    </command>
+    <!-- Slow down to preserve servo -->
+    <command id="STRAIGHT" gyro="on" invert_for_red="on">
+      <distance>10.0</distance>
+      <power>0.4</power>
+    </command>
+     <!-- Turn in parallel with the MOVE boom -->
+    <command id="ASYNC_TURN">
+      <operation>start</operation>
+      <angle>90</angle>
+      <power>0.85</power>
+    </command>
+    <command id="MOVE_BOOM">
+      <position>195</position>
+    </command>
+    <command id="ASYNC_TURN">
+      <operation>wait</operation>
+    </command>
+    <command id="MOVE_FINGERS">
+      <position>up</position>
+    </command>
+    <command id="SLEEP">
+      <ms>500</ms>
+    </command>
+    <command id="STRAIGHT" gyro="on" invert_for_red="on">
+      <distance>-8.5</distance>
+      <power>0.85</power>
+    </command>
+    <command id="STRAFE">
+      <distance>10.0</distance>
+      <power>0.95</power>
+      <direction>left</direction>
+    </command>
+    <command id="STRAFE">
+      <distance>6.0</distance>
+      <power>0.95</power>
+      <direction>right</direction>
+    </command>
+    <command id="STRAIGHT" gyro="on" invert_for_red="on">
+      <distance>19.0</distance>
+      <power>0.95</power>
+    </command>
+    <!--Quick change to re-adjust position for robot once teleop starts-->
+    <command id="TURN">
+      <angle>90</angle>
+      <power>0.85</power>
+    </command>
+	<command id="DESKEW"/>
+    <command id="STRAIGHT" gyro="on">
+      <distance>-33.0</distance>
+      <power>0.85</power>
+	  </command>
+  </OpMode>
+
+  <OpMode id="BLUE_BOTTOM_HALF">
+    <command id="FIND_SKYSTONE_PATTERN">
+      <ocv_image_provider>vuforia</ocv_image_provider>
+    </command>
+    <!-- command id="VUFORIA">
+      <operation>release</operation>
+    </command -->
+    <command id="ADVANCE_TO_QUARRY">
+      <drive_distance>21.5</drive_distance>
+      <drive_power>0.75</drive_power>
+      <disengage_boom_clicks>-550</disengage_boom_clicks>
+      <raise_boom_clicks>200</raise_boom_clicks>
+      <extend_boom_clicks>1370</extend_boom_clicks>
+    </command>
+    <command id="ROTATE_GRIPPER">
+      <position>degrees_90</position>
+    </command>
+    <command id="STRAFE_TO_SKYSTONE">
+      <power>0.75</power>
+      <cardinal>first</cardinal>
+    </command>
+    <command id="TILT_BOOM">
+      <position>-611</position>
+    </command>
+    <command id="SET_GRIPPER_POSITION">
+      <position>grip</position>
+    </command>
+    <command id="SLEEP">
+      <ms>500</ms>
+    </command>
+    <command id="TILT_BOOM">
+      <position>400</position>
+    </command>
+    <command id="ASYNC_TURN">
+      <operation>start</operation>
+      <angle>90</angle>
+    </command>
+    <command id="ROTATE_GRIPPER">
+      <position>neutral</position>
+    </command>
+    <command id="SLEEP">
+      <ms>500</ms>
+    </command>
+    <command id="MOVE_BOOM">
+      <position>454</position>
+    </command>
+    <command id="TILT_BOOM">
+      <position>-341</position>
+    </command>
+    <command id="MOVE_BOOM">
+      <position>0</position>
+    </command>
+    <command id="TILT_BOOM">
+      <position>-620</position>
+    </command>
+    <command id="ASYNC_HOLD_BOOM">
+      <operation>start</operation>
+      <position>-620</position>
+    </command>
+    <command id="SET_GRIPPER_POSITION">
+      <position>neutral</position>
+    </command>
+    <command id="ASYNC_TURN">
+      <operation>wait</operation>
+    </command>
+    <command id="STRAIGHT_AFTER_SKYSTONE" gyro="on">
+      <distance>47.5</distance>
+      <cardinal>first</cardinal>
+      <power>1.0</power>
+    </command>
+    <!-- See if this helps with alignment -->
+    <command id="DESKEW"/>
+  <command id="STRAIGHT" gyro="on">
+      <distance>-16.0</distance>
+      <power>0.95</power>
+    </command>
+  
+  </OpMode>
+  
+  <!-- 11/28/19 RED_TOP is now identical to BLUE_TOP -->
+  <OpMode id="RED_TOP">
+    <command id="STRAFE">
+      <distance>40.0</distance>
+      <power>0.75</power>
+      <direction>left</direction>
+    </command>
+    <command id="MOVE_FINGERS">
+      <position>down</position>
+    </command>
+    <command id="SLEEP">
+      <ms>500</ms>
+    </command>
+    <command id="STRAFE">
+      <distance>26.0</distance>
+      <power>0.75</power>
+      <direction>right</direction>
+    </command>
+    <command id="STRAIGHT" gyro="on" invert_for_red="on">
+      <distance>8.0</distance>
+      <power>0.85</power>
+      <!-- Slow down to preserve servo -->
+    </command>
+    <command id="STRAIGHT" gyro="on" invert_for_red="on">
+      <distance>10.0</distance>
+      <power>0.3</power>
+    </command>
+    <command id="TURN" invert_for_red="on">
+      <angle>90</angle>
+      <power>0.75</power>
+    </command>
+    <command id="MOVE_FINGERS">
+      <position>up</position>
+    </command>
+	<command id="ASYNC_HOLD_BOOM">
+      <operation>start</operation>
+      <position>-620</position>
+    </command>
+    <command id="SLEEP">
+      <ms>1000</ms>
+    </command>
+    <command id="STRAIGHT" gyro="on" invert_for_red="on">
+      <distance>-8.5</distance>
+      <power>0.75</power>
+    </command>
+    <command id="STRAFE">
+      <distance>12.0</distance>
+      <power>0.75</power>
+      <direction>left</direction>
+    </command>
+    <command id="STRAFE">
+      <distance>8.0</distance>
+      <power>0.75</power>
+      <direction>right</direction>
+    </command>
+    <command id="STRAIGHT" gyro="on" invert_for_red="on">
+      <distance>17.0</distance>
+      <power>0.75</power>
+    </command>
+   <!--Quick change to re-adjust position for robot once teleop starts-->
+    <command id="TURN">
+      <angle>-90</angle>
+      <power>0.75</power>
+    </command>
+	<command id="DESKEW"/>
+    <command id="STRAIGHT" gyro="on">
+      <distance>34.0</distance>
+      <power>0.75</power>
+    </command>
+  </OpMode>
+<OpMode id="RED_BOTTOM">
+    <command id="FIND_SKYSTONE_PATTERN">
+      <ocv_image_provider>vuforia</ocv_image_provider>
+    </command>
+    <!-- command id="VUFORIA">
+      <operation>release</operation>
+    </command -->
+    <command id="ADVANCE_TO_QUARRY">
+      <drive_distance>21.5</drive_distance>
+      <drive_power>0.75</drive_power>
+      <disengage_boom_clicks>-550</disengage_boom_clicks>
+      <raise_boom_clicks>200</raise_boom_clicks>
+      <extend_boom_clicks>1370</extend_boom_clicks>
+    </command>
+    <command id="ROTATE_GRIPPER">
+      <position>degrees_90</position>
+    </command>
+    <command id="STRAFE_TO_SKYSTONE">
+      <power>0.75</power>
+      <cardinal>first</cardinal>
+    </command>
+    <command id="TILT_BOOM">
+      <position>-611</position>
+    </command>
+    <command id="SET_GRIPPER_POSITION">
+      <position>grip</position>
+    </command>
+    <command id="SLEEP">
+      <ms>500</ms>
+    </command>
+    <command id="TILT_BOOM">
+      <position>400</position>
+    </command>
+    <command id="ASYNC_TURN">
+      <operation>start</operation>
+      <angle>-90</angle>
+    </command>
+    <command id="ROTATE_GRIPPER">
+      <position>neutral</position>
+    </command>
+    <command id="SLEEP">
+      <ms>500</ms>
+    </command>
+    <command id="MOVE_BOOM">
+      <position>454</position>
+    </command>
+    <command id="TILT_BOOM">
+      <position>-341</position>
+    </command>
+    <command id="MOVE_BOOM">
+      <position>0</position>
+    </command>
+    <command id="TILT_BOOM">
+      <position>-620</position>
+    </command>
+    <command id="ASYNC_HOLD_BOOM">
+      <operation>start</operation>
+      <position>-620</position>
+    </command>
+    <command id="SET_GRIPPER_POSITION">
+      <position>neutral</position>
+    </command>
+    <command id="ASYNC_TURN">
+      <operation>wait</operation>
+    </command>
+     <command id="STRAIGHT_AFTER_SKYSTONE" gyro="on">
+      <distance>88.5</distance>
+      <cardinal>first</cardinal>
+      <power>1.0</power>
+    </command>
+    <!-- See if this helps with alignment -->
+    <command id="DESKEW"/>
+    <command id="STRAFE">
+      <distance>14.0</distance>
+      <power>0.4</power>
+      <direction>left</direction>
+    </command>
+    <command id="MOVE_FINGERS">
+      <position>down</position>
+    </command>
+    <command id="SLEEP">
+      <ms>500</ms>
+    </command>
+    <command id="STRAFE">
+      <distance>28.0</distance>
+      <power>0.85</power>
+      <direction>right</direction>
+    </command>
+    <command id="STRAIGHT" gyro="on" invert_for_red="on">
+      <distance>6.0</distance>
+      <power>0.85</power>
+    </command>
+    <!-- Slow down to preserve servo -->
+    <command id="STRAIGHT" gyro="on" invert_for_red="on">
+      <distance>10.0</distance>
+      <power>0.4</power>
+    </command>
+     <!-- Turn in parallel with the MOVE boom -->
+    <command id="ASYNC_TURN">
+      <operation>start</operation>
+      <angle>-90</angle>
+      <power>0.85</power>
+    </command>
+    <command id="MOVE_BOOM">
+      <position>195</position>
+    </command>
+    <command id="ASYNC_TURN">
+      <operation>wait</operation>
+    </command>
+    <command id="MOVE_FINGERS">
+      <position>up</position>
+    </command>
+    <command id="SLEEP">
+      <ms>500</ms>
+    </command>
+    <command id="STRAIGHT" gyro="on" invert_for_red="on">
+      <distance>-8.5</distance>
+      <power>0.85</power>
+    </command>
+    <command id="STRAFE">
+      <distance>10.0</distance>
+      <power>0.95</power>
+      <direction>left</direction>
+    </command>
+    <command id="STRAFE">
+      <distance>6.0</distance>
+      <power>0.95</power>
+      <direction>right</direction>
+    </command>
+    <command id="STRAIGHT" gyro="on" invert_for_red="on">
+      <distance>19.0</distance>
+      <power>0.95</power>
+    </command>
+    <!--Quick change to re-adjust position for robot once teleop starts-->
+    <command id="TURN">
+      <angle>90</angle>
+      <power>0.85</power>
+    </command>
+	<command id="DESKEW"/>
+    <command id="STRAIGHT" gyro="on">
+      <distance>-33.0</distance>
+      <power>0.85</power>
+	  </command>
+  </OpMode>
+  
+  
+<OpMode id="RED_BOTTOM_HALF">
+    <command id="FIND_SKYSTONE_PATTERN">
+      <ocv_image_provider>vuforia</ocv_image_provider>
+    </command>
+    <!-- command id="VUFORIA">
+      <operation>release</operation>
+    </command -->
+    <command id="ADVANCE_TO_QUARRY">
+      <drive_distance>21.5</drive_distance>
+      <drive_power>0.75</drive_power>
+      <disengage_boom_clicks>-550</disengage_boom_clicks>
+      <raise_boom_clicks>200</raise_boom_clicks>
+      <extend_boom_clicks>1370</extend_boom_clicks>
+    </command>
+    <command id="ROTATE_GRIPPER">
+      <position>degrees_90</position>
+    </command>
+    <command id="STRAFE_TO_SKYSTONE">
+      <power>0.75</power>
+      <cardinal>first</cardinal>
+    </command>
+    <command id="TILT_BOOM">
+      <position>-611</position>
+    </command>
+    <command id="SET_GRIPPER_POSITION">
+      <position>grip</position>
+    </command>
+    <command id="SLEEP">
+      <ms>500</ms>
+    </command>
+    <command id="TILT_BOOM">
+      <position>400</position>
+    </command>
+    <command id="ASYNC_TURN">
+      <operation>start</operation>
+      <angle>-90</angle>
+    </command>
+    <command id="ROTATE_GRIPPER">
+      <position>neutral</position>
+    </command>
+    <command id="SLEEP">
+      <ms>500</ms>
+    </command>
+    <command id="MOVE_BOOM">
+      <position>454</position>
+    </command>
+    <command id="TILT_BOOM">
+      <position>-341</position>
+    </command>
+    <command id="MOVE_BOOM">
+      <position>0</position>
+    </command>
+    <command id="TILT_BOOM">
+      <position>-620</position>
+    </command>
+    <command id="ASYNC_HOLD_BOOM">
+      <operation>start</operation>
+      <position>-620</position>
+    </command>
+    <command id="SET_GRIPPER_POSITION">
+      <position>neutral</position>
+    </command>
+    <command id="ASYNC_TURN">
+      <operation>wait</operation>
+    </command>
+    <command id="STRAIGHT_AFTER_SKYSTONE" gyro="on">
+      <distance>59.5</distance>
+      <cardinal>first</cardinal>
+      <power>1.0</power>
+    </command>
+    <!-- See if this helps with alignment -->
+    <command id="DESKEW"/>
+  <command id="STRAIGHT" gyro="on">
+      <distance>-18.0</distance>
+      <power>0.95</power>
+    </command>
+  </OpMode>
+
+
+</RobotConfigXML>
+
