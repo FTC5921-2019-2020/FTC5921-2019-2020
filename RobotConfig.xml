@@ -7,7 +7,7 @@
   </command>
   <command id="SET_INTAKE_POWER">
     <powerLeft>0.4</powerLeft>
-    <powerRight>0.4</powerRight>
+    <powerRight>0.2</powerRight>
   </command>
   <command id="TRACK_DISTANCE">
     <operation>start</operation>
@@ -122,7 +122,7 @@
       <cardinal>first</cardinal>
     </command>
     <command id="TILT_BOOM">
-      <position>-611</position>
+      <position>-711</position>
     </command>
     <command id="SET_GRIPPER_POSITION">
       <position>grip</position>
@@ -147,17 +147,17 @@
       <position>454</position>
     </command>
     <command id="TILT_BOOM">
-      <position>-341</position>
+      <position>-441</position>
     </command>
     <command id="MOVE_BOOM">
       <position>0</position>
     </command>
     <command id="TILT_BOOM">
-      <position>-620</position>
+      <position>-720</position>
     </command>
     <command id="ASYNC_HOLD_BOOM">
       <operation>start</operation>
-      <position>-620</position>
+      <position>-820</position>
     </command>
     <command id="SET_GRIPPER_POSITION">
       <position>neutral</position>
@@ -166,7 +166,7 @@
       <operation>wait</operation>
     </command>
     <command id="STRAIGHT_AFTER_SKYSTONE" gyro="on">
-      <distance>-72.5</distance>
+      <distance>-75.5</distance>
       <cardinal>first</cardinal>
       <power>1.0</power>
     </command>
@@ -197,7 +197,7 @@
       <distance>10.0</distance>
       <power>0.4</power>
     </command>
-     <!-- Turn in parallel with the MOVE boom -->
+     <!-- Turn inparallel with the MOVE boom -->
     <command id="ASYNC_TURN">
       <operation>start</operation>
       <angle>90</angle>
@@ -220,17 +220,17 @@
       <power>0.85</power>
     </command>
     <command id="STRAFE">
-      <distance>10.0</distance>
-      <power>0.95</power>
-      <direction>left</direction>
-    </command>
-    <command id="STRAFE">
-      <distance>6.0</distance>
+      <distance>22.0</distance>
       <power>0.95</power>
       <direction>right</direction>
     </command>
+    <command id="STRAFE">
+      <distance>2.0</distance>
+      <power>0.95</power>
+      <direction>left</direction>
+    </command>
     <command id="STRAIGHT" gyro="on" invert_for_red="on">
-      <distance>19.0</distance>
+      <distance>16.0</distance>
       <power>0.95</power>
     </command>
     <!--Quick change to re-adjust position for robot once teleop starts-->
@@ -240,7 +240,7 @@
     </command>
 	<command id="DESKEW"/>
     <command id="STRAIGHT" gyro="on">
-      <distance>-33.0</distance>
+      <distance>-18.0</distance>
       <power>0.85</power>
 	  </command>
   </OpMode>
