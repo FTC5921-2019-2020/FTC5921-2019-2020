@@ -1,11 +1,31 @@
 <RobotConfigXML>
 <OpMode id="TEST">
+  <command id="ASYNC_STRAIGHT">
+    <operation>start</operation>
+    <distance>24.0</distance>
+    <power>0.55</power>
+  </command>
   <command id="SET_INTAKE_POWER">
     <powerLeft>0.4</powerLeft>
-    <powerRight>0.2</powerRight>
+    <powerRight>0.4</powerRight>
+  </command>
+  <command id="TRACK_DISTANCE">
+    <operation>start</operation>
+    <direction>closer</direction>
+    <distance>3.0</distance>
+  </command>
+  <!-- command id="TRACK_DISTANCE">
+    <operation>monitor</operation>
+    <ms>5000</ms>
+  </command -->
+  <command id="ASYNC_STRAIGHT">
+    <operation>wait</operation>
   </command>
   <command id="SLEEP">
-    <ms>1000</ms>
+    <ms>3000</ms>
+  </command>
+  <command id="TRACK_DISTANCE">
+    <operation>stop</operation>
   </command>
   <command id="SET_INTAKE_POWER">
     <powerLeft>0</powerLeft>
