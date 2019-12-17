@@ -214,7 +214,7 @@
       <power>0.85</power>
     </command>
     <command id="STRAFE">
-      <distance>22.0</distance>
+      <distance>12.0</distance>
       <power>0.95</power>
       <direction>right</direction>
     </command>
@@ -228,7 +228,7 @@
       <power>0.75</power>
     </command>
     <command id="STRAIGHT" gyro="on">
-      <distance>-14.0</distance>
+      <distance>-24.0</distance>
       <power>0.95</power>
     </command>
 
@@ -503,12 +503,12 @@
       <power>0.85</power>
 	  </command>
     <command id="STRAFE">
-      <distance>18.0</distance>
+      <distance>8.0</distance>
       <power>0.95</power>
       <direction>right</direction>
     </command>
     <command id="STRAIGHT" gyro="on" invert_for_red="on">
-      <distance>16.0</distance>
+      <distance>14.0</distance>
       <power>0.95</power>
     </command>
     <!--Quick change to re-adjust position for robot once teleop starts-->
@@ -517,7 +517,7 @@
       <power>0.85</power>
     </command>
     <command id="STRAIGHT" gyro="on">
-      <distance>-15.0</distance>
+      <distance>-27.0</distance>
       <power>0.95</power>
 	  </command>
   </OpMode>
