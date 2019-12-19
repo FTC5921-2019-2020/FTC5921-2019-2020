@@ -34,8 +34,14 @@
 </OpMode>
   <OpMode id="BLUE_TOP">
     <command id="STRAFE">
-      <distance>40.0</distance>
-      <power>0.5</power>
+      <distance>25.0</distance>
+      <power>0.6</power>
+      <direction>left</direction>
+    </command>
+    <command id="DESKEW"/>
+    <command id="STRAFE">
+      <distance>15.0</distance>
+      <power>0.4</power>
       <direction>left</direction>
     </command>
     <command id="MOVE_FINGERS">
@@ -322,8 +328,14 @@
   <!-- 11/28/19 RED_TOP is now identical to BLUE_TOP -->
   <OpMode id="RED_TOP">
     <command id="STRAFE">
-      <distance>40.0</distance>
-      <power>0.75</power>
+      <distance>25.0</distance>
+      <power>0.6</power>
+      <direction>left</direction>
+    </command>
+    <command id="DESKEW"/>
+    <command id="STRAFE">
+      <distance>15.0</distance>
+      <power>0.4</power>
       <direction>left</direction>
     </command>
     <command id="MOVE_FINGERS">
