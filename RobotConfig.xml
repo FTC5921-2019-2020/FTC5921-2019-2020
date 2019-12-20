@@ -54,12 +54,16 @@
     <command id="ASYNC_TURN">
       <operation>wait</operation>
     </command>
+    <command id="DESKEW"/>
     <command id="STRAIGHT_AFTER_SKYSTONE" gyro="on">
       <distance>-62</distance>
       <cardinal>first</cardinal>
       <power>1.0</power>
     </command>
     <command id="DESKEW"/>
+	<command id="ASYNC_HOLD_BOOM">
+      <operation>stop</operation>
+    </command>
     <command id="TILT_BOOM">
       <position>300</position>
     </command>
