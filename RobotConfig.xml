@@ -55,14 +55,21 @@
       <operation>wait</operation>
     </command>
     <command id="STRAIGHT_AFTER_SKYSTONE" gyro="on">
-      <distance>47.5</distance>
+      <distance>-62</distance>
       <cardinal>first</cardinal>
       <power>1.0</power>
     </command>
     <command id="DESKEW"/>
+    <command id="TILT_BOOM">
+      <position>300</position>
+    </command>
+    <command id="TURN" invert_for_red="on">
+      <angle>60</angle>
+      <power>0.05</power>
+    </command>
 	<!--
   <command id="STRAIGHT" gyro="on">
-      <distance>-16.0</distance>
+      <distance>16.0</distance>
       <power>0.95</power>
     </command>
     <command id="STRAIGHT" gyro="on" invert_for_red="on">
