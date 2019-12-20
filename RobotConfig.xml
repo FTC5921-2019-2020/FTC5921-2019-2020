@@ -1,36 +1,127 @@
 <RobotConfigXML>
-<OpMode id="TEST">
+<OpMode id="TEST"> <command id="FIND_SKYSTONE_PATTERN">
+      <ocv_image_provider>vuforia</ocv_image_provider>
+    </command>
+    <!-- command id="VUFORIA">
+      <operation>release</operation>
+    </command -->
+    <command id="ADVANCE_TO_QUARRY">
+      <drive_distance>21.5</drive_distance>
+      <drive_power>0.75</drive_power>
+      <disengage_boom_clicks>-550</disengage_boom_clicks>
+      <raise_boom_clicks>200</raise_boom_clicks>
+      <extend_boom_clicks>1370</extend_boom_clicks>
+    </command>
+    <command id="ROTATE_GRIPPER">
+      <position>degrees_90</position>
+    </command>
+    <command id="STRAFE_TO_SKYSTONE">
+      <power>0.75</power>
+      <cardinal>first</cardinal>
+    </command>
+    <command id="TILT_BOOM">
+      <position>-611</position>
+    </command>
+    <command id="SET_GRIPPER_POSITION">
+      <position>grip</position>
+    </command>
+    <command id="SLEEP">
+      <ms>500</ms>
+    </command>
+    <command id="TILT_BOOM">
+      <position>400</position>
+    </command>
+    <command id="ASYNC_TURN">
+      <operation>start</operation>
+      <angle>-90</angle>
+    </command>
+    <command id="ROTATE_GRIPPER">
+      <position>neutral</position>
+    </command>
+    <command id="SLEEP">
+      <ms>500</ms>
+    </command>
+    <command id="MOVE_BOOM">
+      <position>1280</position>
+    </command>
+    <command id="TILT_BOOM">
+      <position>73</position>
+    </command>
+    <command id="ASYNC_HOLD_BOOM">
+      <operation>start</operation>
+      <position>73</position>
+    </command>
+    <command id="ASYNC_TURN">
+      <operation>wait</operation>
+    </command>
+    <command id="STRAIGHT_AFTER_SKYSTONE" gyro="on">
+      <distance>47.5</distance>
+      <cardinal>first</cardinal>
+      <power>1.0</power>
+    </command>
+    <command id="DESKEW"/>
+	<!--
+  <command id="STRAIGHT" gyro="on">
+      <distance>-16.0</distance>
+      <power>0.95</power>
+    </command>
+    <command id="STRAIGHT" gyro="on" invert_for_red="on">
+      <distance>8.0</distance>
+      <power>0.75</power>
+    </command>
+    <command id="TURN" invert_for_red="on">
+      <angle>-90</angle>
+      <power>0.75</power>
+    </command>
+    <command id="DESKEW"/>
+    <command id="STRAIGHT_AFTER_SKYSTONE" gyro="on">
+      <distance>5.5</distance>
+      <cardinal>first</cardinal>
+      <power>1.0</power>
+    </command>
+    <command id="STRAFE">
+      <distance>35.0</distance>
+      <power>0.6</power>
+      <direction>left</direction>
+    </command>
+    <command id="DESKEW"/>
   <command id="ASYNC_STRAIGHT">
     <operation>start</operation>
-    <distance>24.0</distance>
+    <distance>10.0</distance>
     <power>0.55</power>
   </command>
   <command id="SET_INTAKE_POWER">
     <powerLeft>0.4</powerLeft>
-    <powerRight>0.2</powerRight>
+    <powerRight>0.4</powerRight>
   </command>
   <command id="TRACK_DISTANCE">
     <operation>start</operation>
     <direction>closer</direction>
     <distance>3.0</distance>
   </command>
-  <!-- command id="TRACK_DISTANCE">
-    <operation>monitor</operation>
-    <ms>5000</ms>
-  </command -->
   <command id="ASYNC_STRAIGHT">
     <operation>wait</operation>
-  </command>
-  <command id="SLEEP">
-    <ms>3000</ms>
   </command>
   <command id="TRACK_DISTANCE">
     <operation>stop</operation>
   </command>
+    <command id="STRAFE">
+      <distance>20.0</distance>
+      <power>0.6</power>
+      <direction>right</direction>
+    </command>
+    <command id="DESKEW"/>
   <command id="SET_INTAKE_POWER">
     <powerLeft>0</powerLeft>
     <powerRight>0</powerRight>
   </command>
+    <command id="STRAIGHT_AFTER_SKYSTONE" gyro="on">
+      <distance>-45.5</distance>
+      <cardinal>second</cardinal>
+      <power>1.0</power>
+    </command>
+    <command id="DESKEW"/>
+	-->
 </OpMode>
   <OpMode id="BLUE_TOP">
     <command id="STRAFE">
@@ -615,4 +706,4 @@
 
 
 </RobotConfigXML>
-
+
