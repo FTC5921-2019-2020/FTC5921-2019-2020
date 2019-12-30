@@ -39,7 +39,7 @@
     <distance>-28.0</distance>
     <power>.75</power>
   </command>
-	<command id="ASYNC_HOLD_BOOM">
+	<command id="ASYNC_HOLD_TILT">
       <operation>start</operation>
       <position>-700</position>
     </command>
@@ -60,7 +60,7 @@
       <angle invert_for_red="on">60</angle>
       <power>0.7</power>
     </command>
-	<command id="ASYNC_HOLD_BOOM">
+	<command id="ASYNC_HOLD_TILT">
       <operation>release</operation>
     </command>
 </OpMode>
