@@ -8,10 +8,10 @@
     </command -->
     <command id="ADVANCE_TO_QUARRY">
       <drive_distance>21.5</drive_distance>
-      <drive_power>0.75</drive_power>
+      <drive_power>0.85</drive_power>
       <disengage_boom_clicks>-550</disengage_boom_clicks>
       <raise_boom_clicks>0</raise_boom_clicks>
-      <extend_boom_clicks>100</extend_boom_clicks>
+      <extend_boom_clicks>200</extend_boom_clicks>
     </command>
     <command id="STRAFE_TO_SKYSTONE">
       <power>0.75</power>
@@ -37,9 +37,9 @@
   <command id="ASYNC_STRAIGHT">
     <operation>start</operation>
     <distance>-28.0</distance>
-    <power>.6</power>
+    <power>.75</power>
   </command>
-	<command id="ASYNC_HOLD_TILT">
+	<command id="ASYNC_HOLD_BOOM">
       <operation>start</operation>
       <position>-700</position>
     </command>
@@ -58,7 +58,7 @@
     </command>
     <command id="TURN">
       <angle invert_for_red="on">60</angle>
-      <power>0.5</power>
+      <power>0.7</power>
     </command>
 	<command id="ASYNC_HOLD_BOOM">
       <operation>release</operation>
