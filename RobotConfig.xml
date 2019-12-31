@@ -1,5 +1,5 @@
 <RobotConfigXML>
-<OpMode id="TEST">
+<OpMode id="TEST" alliance="blue">
 <command id="FIND_SKYSTONE_PATTERN">
       <ocv_image_provider>vuforia</ocv_image_provider>
     </command>
@@ -36,7 +36,7 @@
   </command>
   <command id="ASYNC_STRAIGHT">
     <operation>start</operation>
-    <distance>-28.0</distance>
+    <distance>-25.0</distance>
     <power>.75</power>
   </command>
 	<command id="ASYNC_HOLD_TILT">
@@ -46,22 +46,10 @@
   <command id="ASYNC_STRAIGHT">
     <operation>wait</operation>
   </command>
-    <command id="TURN">
-      <angle invert_for_red="on">-90</angle>
-      <power>0.5</power>
-    </command>
-    <command id="DESKEW"/>
-    <command id="STRAIGHT_AFTER_SKYSTONE" gyro="on">
-      <distance>-62</distance>
-      <cardinal>first</cardinal>
-      <power>1.0</power>
-    </command>
-    <command id="TURN">
-      <angle invert_for_red="on">60</angle>
-      <power>0.7</power>
-    </command>
-	<command id="ASYNC_HOLD_TILT">
-      <operation>release</operation>
+    <command id="STRAFE">
+      <distance>30.0</distance>
+      <power>0.6</power>
+      <direction>left</direction>
     </command>
 </OpMode>
 <OpMode id="BLUE_SKYSTONE_2"> 
