@@ -1,4 +1,26 @@
 <RobotConfigXML>
+  <OpMode id="TEST_PID" alliance="blue">
+    <command id="STRAIGHT" gyro="on">
+      <distance>36.0</distance>
+      <power>0.95</power>
+    </command>
+    <command id="STRAIGHT" gyro="on">
+      <distance>-36.0</distance>
+      <power>0.95</power>
+    </command>
+    <command id="STRAFE" gyro="off">
+      <distance>36.0</distance>
+      <power>0.6</power>
+      <direction>right</direction>
+    </command>
+    <command id="DESKEW"/>
+    <command id="STRAFE" gyro="on">
+      <distance>36.0</distance>
+      <power>0.6</power>
+      <direction>left</direction>
+    </command>
+    <command id="DESKEW"/>
+  </OpMode>
 <OpMode id="TEST" alliance="blue">
 <command id="FIND_SKYSTONE_PATTERN">
       <ocv_image_provider>vuforia</ocv_image_provider>
