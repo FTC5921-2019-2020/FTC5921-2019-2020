@@ -9,9 +9,9 @@
     <command id="ADVANCE_TO_QUARRY">
       <drive_distance>21.5</drive_distance>
       <drive_power>0.85</drive_power>
-      <disengage_boom_clicks>-550</disengage_boom_clicks>
+      <disengage_boom_clicks>-650</disengage_boom_clicks>
       <raise_boom_clicks>0</raise_boom_clicks>
-      <extend_boom_clicks>200</extend_boom_clicks>
+      <extend_boom_clicks>300</extend_boom_clicks>
     </command>
     <command id="STRAFE_TO_SKYSTONE">
       <power>0.75</power>
@@ -19,7 +19,7 @@
     </command>
  <command id="ASYNC_STRAIGHT">
     <operation>start</operation>
-    <distance>28.0</distance>
+    <distance>33.0</distance>
     <power>1.0</power>
   </command>
   <command id="SET_INTAKE_POWER">
@@ -31,12 +31,15 @@
     <direction>closer</direction>
     <distance>3.0</distance>
   </command>
+    <command id="MOVE_BOOM">
+      <position>100</position>
+    </command>
   <command id="ASYNC_STRAIGHT">
     <operation>wait</operation>
   </command>
   <command id="ASYNC_STRAIGHT">
     <operation>start</operation>
-    <distance>-25.0</distance>
+    <distance>-27.5</distance>
     <power>.75</power>
   </command>
 	<command id="ASYNC_HOLD_TILT">
@@ -46,10 +49,21 @@
   <command id="ASYNC_STRAIGHT">
     <operation>wait</operation>
   </command>
+  <command id="DESKEW"/>
+    <command id="SET_GRIPPER_POSITION">
+      <position>grip</position>
+    </command>
     <command id="STRAFE">
-      <distance>30.0</distance>
+      <distance>65.0</distance>
       <power>0.6</power>
       <direction>left</direction>
+    </command>
+  <command id="DESKEW"/>
+    <command id="TILT_BOOM">
+      <position>100</position>
+    </command>
+    <command id="MOVE_BOOM">
+      <position>700</position>
     </command>
 </OpMode>
 <OpMode id="BLUE_SKYSTONE_2"> 
