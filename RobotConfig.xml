@@ -742,6 +742,12 @@
     </command>
   </OpMode>
 <OpMode id="RED_BOTTOM">
+    <command id="STRAFE">
+      <distance>18.0</distance>
+      <power>0.4</power>
+      <direction>left</direction>
+    </command>
+    <command id="DESKEW"/>
     <command id="FIND_SKYSTONE_PATTERN">
       <ocv_image_provider>vuforia</ocv_image_provider>
     </command>
